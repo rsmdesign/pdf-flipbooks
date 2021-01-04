@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="Refresh" content="0; url='https://rsmdesign.com'" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="robots" content="noindex,nofollow">
+  <title>RSM Design · Flipbook Embedding Guide</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link href="assets/css/guide.css" rel="stylesheet" type="text/css">
 
   <link href="rsm-design_logo_mark_favicon.png" rel="shortcut icon" type="image/x-icon"/>
   <link href="rsm-design_logo_mark_touch-icon.png" rel="apple-touch-icon"/>
 </head>
 <body>
-  <h1>RSM Design · PDF Flipbooks</h1>
+  <h1>Embed a flipbook on your site</h1>
+
+  <h2>What is an iframe?</h2>
+  <p>Put simply, an iframe is a container that lets you display another webpage inside your own webpage, without having to host any of its content yourself. All you have to do is specify the source URL and a few display parameters such as the width and height of the container.</p>
+  <p>You’ve probably encountered an iframe before if you’ve ever tried to embed a video from YouTube or Vimeo.</p>
+  <p><strong>Caution:</strong> You should only embed iframe code from trusted sources. Whoever hosts the embedded site can modify its content at any time, potentially exposing your website’s visitors to dangerous or unsavory content.</p>
+
+  <h2>How to format the iframe embed code</h2>
+  <p>An iframe consists of a single, simple HTML element. In its most basic form, it looks like this:</p>
+  <pre><code>
+    &lt;iframe src="example.com">&lt;/iframe>
+  </code></pre>
+  <p>Change the <code>src</code> attribute to the URL of the webpage you want to display. Note that if your site uses HTTPS, so too must the source URL; and likewise for HTTP.</p>
+  <p>Besides the source URL, two other attributes you may want to adjust are <code>width</code> and <code>height</code>. These can be specified in exact pixel values or percentages. We usually recommend setting <code>width="100%"</code> and manually specifying the height. So, your iframe code would look like this:</p>
+  <pre><code>
+    &lt;iframe src="example.com" width="100%" height="600px">&lt;/iframe>
+  </code></pre>
+  <p>If you want more flexibility with the height, you can wrap the iframe in a <code>div</code> block, specify a responsive height for the <code>div</code>, and set the iframe to <code>height="100%"</code>. That would look like this:</p>
+  <pre><code>
+    &lt;div style="height:50vw;width:100%">&lt;iframe src="example.com" width="100%" height="100%">&lt;/iframe>&lt;/div>
+  </code></pre>
+  <p>Just change <code>height:50vw</code> to whatever works best for your site.</p>
+  <p>Optionally, you can specify a <code>title</code> attribute. Putting that all together, your iframe code will look something like this:</p>
+  <pre><code>
+    &lt;div style="height:50vw;width:100%">&lt;iframe src="example.com" title="Example iframe" width="100%" height="100%">&lt;/iframe>&lt;/div>
+  </code></pre>
+
+  <h2>Using an iframe in WordPress</h2>
+  <p>Once you’ve generated your iframe code, most of your work is done. To insert the code into your WordPress website, do one of the following:</p>
+  <ul>
+    <li>If you’re using the WordPress Block Editor, insert a <strong>Custom HTML</strong> block and paste your iframe code (and its <code>div</code> container, if applicable).</li>
+    <li>If you’re using the WordPress Classic Editor, switch to the <strong>“text editor”</strong> view using the tabs at the top right of the editor component. Find where on the page you want to display the embedded webpage, and paste your iframe code (and its <code>div</code> container, if applicable).</li>
+  </ul>
 </body>
 </html>

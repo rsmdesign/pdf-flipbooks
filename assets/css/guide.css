@@ -1,0 +1,260 @@
+/*
+	CSS Primer
+	Version 0.2.0
+	Updated: April 8, 2019
+	Copyright (c) 2016-2019, J. Warner
+	License: MIT
+*/
+body {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: normal;
+  word-wrap: normal;
+  -ms-word-break: normal;
+  word-break: normal;
+  -ms-hyphens: none;
+  -moz-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
+}
+
+:root {
+  --font-size-0: calc(var(--type-scale-0) * 1em);
+  --font-size-1: calc(var(--type-scale-1) * 1em);
+  --font-size-2: calc(var(--type-scale-2) * 1em);
+  --font-size-3: calc(var(--type-scale-3) * 1em);
+  --font-size-4: calc(var(--type-scale-4) * 1em);
+  --font-size-5: calc(var(--type-scale-5) * 1em);
+  --size-0: calc(var(--size-scale-0) * 1em);
+  --size-1: calc(var(--size-scale-1) * 1em);
+  --size-2: calc(var(--size-scale-2) * 1em);
+  --size-3: calc(var(--size-scale-3) * 1em);
+  --size-4: calc(var(--size-scale-4) * 1em);
+  --size-5: calc(var(--size-scale-5) * 1em);
+}
+
+:root {
+  --unit-size: 2.4rem;
+  --type-scale-0: 0.75;
+  --type-scale-1: 1;
+  --type-scale-2: 1.5;
+  --type-scale-3: 2;
+  --type-scale-4: 3;
+  --type-scale-5: 4;
+  --line-height-0: 1.5;
+  --line-height-1: 1.5;
+  --line-height-2: 1.375;
+  --line-height-3: 1.25;
+  --line-height-4: 1.125;
+  --line-height-5: 1;
+  --size-scale-0: 1;
+  --size-scale-1: 2;
+  --size-scale-2: 4;
+  --size-scale-3: 8;
+  --size-scale-4: 16;
+  --size-scale-5: 32;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 90%;
+  max-width: 1750px;
+  margin: 4em auto;
+  font-size: 2rem;
+  font-size: calc(var(--unit-size) * 0.75);
+  transition: font-size 1s;
+}
+@media (min-width: 25.875em) {
+  body {
+    font-size: 1.5rem;
+    font-size: calc(var(--unit-size) * 0.75);
+  }
+}
+@media (min-width: 48em) {
+  body {
+    font-size: 1.75rem;
+    font-size: calc(var(--unit-size) * 0.875);
+  }
+}
+@media (min-width: 67.5em) {
+  body {
+    font-size: 2rem;
+    font-size: var(--unit-size);
+  }
+}
+@media (min-width: 90em) {
+  body {
+    font-size: 2.25rem;
+    font-size: calc(var(--unit-size) * 1.125);
+  }
+}
+@media (min-width: 120em) {
+  body {
+    font-size: 2.5rem;
+    font-size: calc(var(--unit-size) * 1.25);
+  }
+}
+
+pre, code, small, sub, sup {
+  font-size: var(--font-size-0);
+  line-height: var(--line-height-0);
+}
+
+p {
+  font-size: var(--font-size-1);
+  line-height: var(--line-height-1);
+}
+
+h1 {
+  font-size: var(--font-size-4);
+  line-height: 1.25;
+  line-height: var(--line-height-4);
+}
+
+h2 {
+  font-size: var(--font-size-3);
+  line-height: 1.25;
+  line-height: var(--line-height-3);
+}
+
+h3 {
+  font-size: var(--font-size-2);
+  line-height: 1.25;
+  line-height: var(--line-height-2);
+}
+
+h4 {
+  font-size: var(--font-size-1);
+  line-height: 1.25;
+  line-height: var(--line-height-1);
+}
+
+h5 {
+  font-size: var(--font-size-0);
+  line-height: 1.5;
+  line-height: var(--line-height-0);
+}
+
+h6 {
+  font-size: var(--font-size-0);
+  line-height: 1.5;
+  line-height: var(--line-height-0);
+}
+
+img {
+  max-width: 100%;
+}
+
+html {
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  font-display: swap;
+}
+
+body {
+  font-variant-ligatures: common-ligatures, contextual;
+  font-variant-numeric: oldstyle-nums;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt", "onum";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt", "onum";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt", "onum";
+  font-feature-settings: "kern", "liga", "clig", "calt", "onum";
+  font-family: "Proxima Nova", system-ui, -apple-system, BlinkMacSystemFont, Roboto, DIN, Geneva, "Helvetica Neue", Helvetica, "Liberation Sans", Noto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: 1.5;
+  line-height: var(--line-height-1);
+  color: #1a1818;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+hr {
+  border: 0;
+  height: calc(var(--font-size-1) * 0.1);
+  background: #1a1818;
+}
+
+a {
+  text-decoration: underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+  text-decoration-color: #ed4d29;
+  text-decoration-thickness: 0.05em;
+  color: #ed4d29;
+  transition: color 0.15s ease-out;
+}
+a:hover {
+  color: #ed4d29;
+  text-decoration-color: #ed4d29;
+  cursor: pointer;
+}
+
+ul, ol {
+  list-style-position: outside;
+  padding: 0 0.75em;
+  padding: 0 var(--size-0);
+}
+
+blockquote {
+  font-style: italic;
+  margin-left: 0;
+  padding-left: 0.75em;
+  padding-left: var(--size-0);
+  border-left: 0.1em solid;
+  border-left: calc(var(--font-size-1) * 0.1) solid var(--color-text);
+}
+
+/* Pre and Code */
+code {
+  font-family: "SF Mono", "Roboto Mono", "Fira Code", "Fira Mono", "Ubuntu Mono", Consolas, "Lucida Console", Menlo, Monaco, "Courier New", monospace;
+  padding: 0 0.25em;
+  padding: 0 calc(var(--font-size-0) * 0.5);
+  background-color: #e8e8e8;
+  white-space: pre-wrap;
+}
+
+pre {
+  font-size: 0.75em;
+  background-color: #e8e8e8;
+  display: block;
+  padding: 0.75em 1em;
+  padding: var(--font-size-0) var(--font-size-1);
+  overflow-x: auto;
+}
+pre code {
+  font-size: 1em;
+  padding: 0;
+  background-color: transparent;
+  white-space: pre;
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
